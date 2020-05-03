@@ -1,0 +1,75 @@
+<%@ include file="directive/page.jspf" %>
+<%@ include file="directive/taglib.jspf" %>
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="login.jsp">MS</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="login.jsp"><fmt:message key="home.menu"/></a>
+            </li>
+            <c:if test="${sessionScope.userRole.name == 'admin'}">
+                <li class="nav-item">
+                    <a class="nav-link" href="controller?command=users"><fmt:message
+                            key="users.menu"/></a>
+                </li>
+            </c:if>
+            <c:if test="${sessionScope.userRole.name == 'user'}">
+                <li class="nav-item">
+                    <a class="nav-link" href="controller?command=subscriptions"><fmt:message
+                            key="subscriptions.menu"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="controller?command=basket"><fmt:message key="basket.menu"/></a>
+                </li>
+            </c:if>
+            <c:if test="${not empty sessionScope.userRole}">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="periodicalsDD" data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false"><fmt:message key="periodicals.menu"/></a>
+                    <div class="dropdown-menu" aria-labelledby="periodicalsDD">
+                        <a class="dropdown-item" href="controller?command=periodicals"><fmt:message
+                                key="allPeriodicals.menu"/></a>
+                        <c:forEach var="category" items="${sessionScope.categories}">
+                            <a class="dropdown-item"
+                               href="controller?command=periodicals&category=${category.parentCategoryId}">${category.name}</a>
+                        </c:forEach>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDD" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"><fmt:message key="account.menu"/></a>
+                    <div class="dropdown-menu" aria-labelledby="accountDD">
+                        <a class="dropdown-item" href="controller?command=info"><fmt:message key="myAccount.menu"/></a>
+                        <a class="dropdown-item" href="controller?command=viewSettings"><fmt:message
+                                key="settings.menu"/></a>
+                        <a class="dropdown-item" href="controller?command=logout"><fmt:message key="logout.menu"/></a></a>
+                    </div>
+                </li>
+            </c:if>
+        </ul>
+    </div>
+</nav>
+
+<c:if test="${not empty sessionScope.errorMessage}">
+    <div class="alert alert-danger w-50 mx-auto my-auto text-center" role="alert">
+        <strong>
+            <fmt:message key="${sessionScope.errorMessage}"/>
+        </strong>
+    </div>
+</c:if>
+
+<c:if test="${not empty sessionScope.successMessage}">
+    <div class="alert alert-success w-50 mx-auto my-auto text-center" role="alert">
+        <strong>
+            <fmt:message key="${sessionScope.successMessage}"/>
+        </strong>
+    </div>
+</c:if>
