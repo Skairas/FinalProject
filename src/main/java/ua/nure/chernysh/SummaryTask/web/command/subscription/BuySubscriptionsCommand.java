@@ -8,7 +8,6 @@ import ua.nure.chernysh.SummaryTask.db.dao.UserDAO;
 import ua.nure.chernysh.SummaryTask.entity.Subscription;
 import ua.nure.chernysh.SummaryTask.entity.User;
 import ua.nure.chernysh.SummaryTask.exception.AppException;
-import ua.nure.chernysh.SummaryTask.exception.DBException;
 import ua.nure.chernysh.SummaryTask.web.command.Command;
 
 import javax.servlet.ServletException;

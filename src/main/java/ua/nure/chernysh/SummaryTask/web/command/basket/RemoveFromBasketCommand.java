@@ -6,7 +6,6 @@ import ua.nure.chernysh.SummaryTask.constants.Path;
 import ua.nure.chernysh.SummaryTask.db.dao.PeriodicalDAO;
 import ua.nure.chernysh.SummaryTask.entity.Periodical;
 import ua.nure.chernysh.SummaryTask.exception.AppException;
-import ua.nure.chernysh.SummaryTask.exception.DBException;
 import ua.nure.chernysh.SummaryTask.web.command.Command;
 
 import javax.servlet.ServletException;

@@ -5,7 +5,6 @@ import ua.nure.chernysh.SummaryTask.constants.Fields;
 import ua.nure.chernysh.SummaryTask.db.DBManager;
 import ua.nure.chernysh.SummaryTask.entity.Category;
 import ua.nure.chernysh.SummaryTask.exception.DBException;
-import ua.nure.chernysh.SummaryTask.constants.Messages;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

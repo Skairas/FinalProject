@@ -134,9 +134,9 @@
             data: data,
             url: '/FinalProject/ajax',
             success: [function (serverData) {
-                console.log(serverData)
+                console.log(serverData);
                 var element = document.getElementById("ajaxInfo");
-                var json = JSON.parse(serverData)
+                var json = JSON.parse(serverData);
                 element.className = "";
                 element.classList.add("alert");
                 if (json["successMessage"]) {

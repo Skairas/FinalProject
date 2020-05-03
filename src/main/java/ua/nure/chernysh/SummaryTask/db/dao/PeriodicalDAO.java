@@ -4,7 +4,6 @@ import org.apache.log4j.Logger;
 import ua.nure.chernysh.SummaryTask.constants.Fields;
 import ua.nure.chernysh.SummaryTask.db.DBManager;
 import ua.nure.chernysh.SummaryTask.entity.Periodical;
-import ua.nure.chernysh.SummaryTask.entity.User;
 import ua.nure.chernysh.SummaryTask.exception.DBException;
 import ua.nure.chernysh.SummaryTask.constants.Messages;
 

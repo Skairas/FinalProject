@@ -6,7 +6,6 @@ import ua.nure.chernysh.SummaryTask.constants.Path;
 import ua.nure.chernysh.SummaryTask.db.dao.PeriodicalSubscriptionBeanDAO;
 import ua.nure.chernysh.SummaryTask.db.dao.SubscriptionDAO;
 import ua.nure.chernysh.SummaryTask.entity.Status;
-import ua.nure.chernysh.SummaryTask.entity.Subscription;
 import ua.nure.chernysh.SummaryTask.entity.bean.PeriodicalSubscriptionBean;
 import ua.nure.chernysh.SummaryTask.exception.AppException;
 import ua.nure.chernysh.SummaryTask.web.command.Command;

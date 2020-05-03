@@ -13,8 +13,8 @@ public final class Util {
     /**
      * Method validate field by regexp
      *
-     * @param val
-     * @param regexp
+     * @param val Validating string.
+     * @param regexp Regexp to validate string.
      * @return boolean
      */
     public static boolean validateField(String val, String regexp) {

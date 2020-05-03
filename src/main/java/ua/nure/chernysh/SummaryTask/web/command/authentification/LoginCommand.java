@@ -28,7 +28,7 @@ public class LoginCommand extends Command {
 
     /**
      * Method do log in procedure for user using received credentials
-     *
+     * <p>
      * {@inheritDoc}
      */
     @Override
@@ -38,10 +38,13 @@ public class LoginCommand extends Command {
         HttpSession session = request.getSession();
 
         UserDAO userDAO = UserDAO.getInstance();
-        String login = request.getParameter("login");
 
+        String login = request.getParameter("login");
         String password = request.getParameter("password");
-        if (login == null || password == null || login.isEmpty() || password.isEmpty()) {
+
+        if (login == null || password == null || login.isEmpty() || password.isEmpty()
+                || !Util.validateField(login, Regexps.LOGIN_REGEXP)
+                || !Util.validateField(password, Regexps.PASSWORD_REGEXP)) {
             session.setAttribute("errorMessage", Messages.ERR_EMPTY_FIELDS);
             return Path.PAGE_LOGIN;
         }
