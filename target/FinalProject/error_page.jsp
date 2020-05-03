@@ -16,7 +16,6 @@
         <table id="main-container">
             <tr>
                 <td>
-
                     <%-- this way we obtain an information about an exception (if it has been occurred) --%>
                     <c:set var="code" value="${requestScope['javax.servlet.error.status_code']}"/>
                     <c:set var="message" value="${requestScope['javax.servlet.error.message']}"/>

@@ -52,6 +52,7 @@ public class CommandContainer {
         commands.put("periodicals", new ViewPeriodicalsCommand());
         commands.put("search", new SearchCommand());
         commands.put("viewEditPeriodical", new ViewEditPeriodicalCommand());
+        commands.put("viewAddPeriodicalCommand", new ViewAddPeriodicalCommand());
 
         commands.put("buySubscriptions", new BuySubscriptionsCommand());
         commands.put("renewSubscription", new RenewSubscriptionCommand());

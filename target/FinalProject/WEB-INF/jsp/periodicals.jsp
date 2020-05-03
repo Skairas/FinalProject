@@ -64,7 +64,7 @@
             </span>
             <c:if test="${sessionScope.userRole.name == 'admin'}">
             <span class="float-right">
-                <a href="controller?command=addPeriodical">
+                <a href="controller?command=viewAddPeriodicalCommand">
                     <button class="btn btn-outline-info my-2 my-sm-0 float-right">
                         <fmt:message key="addPeriodical.button"/>
                     </button>
@@ -132,11 +132,11 @@
         $.ajax({
             type: 'POST',
             data: data,
-            url: '/FinalProject/basket',
+            url: '/FinalProject/ajax',
             success: [function (serverData) {
-                console.log(serverData)
+                console.log(serverData);
                 var element = document.getElementById("ajaxInfo");
-                var json = JSON.parse(serverData)
+                var json = JSON.parse(serverData);
                 element.className = "";
                 element.classList.add("alert");
                 if (json["successMessage"]) {

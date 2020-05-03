@@ -64,7 +64,7 @@
             </span>
             <c:if test="${sessionScope.userRole.name == 'admin'}">
             <span class="float-right">
-                <a href="addPeriodical.jsp">
+                <a href="controller?command=viewAddPeriodicalCommand">
                     <button class="btn btn-outline-info my-2 my-sm-0 float-right">
                         <fmt:message key="addPeriodical.button"/>
                     </button>
