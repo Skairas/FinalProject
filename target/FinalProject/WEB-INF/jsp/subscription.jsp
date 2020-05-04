@@ -33,7 +33,8 @@
                 <div><fmt:message key="ending.label"/>: ${requestScope.subscription.endingDate} </div>
             </div>
             <br/><br/>
-            <div>
+            <div style="display: flex">
+                <span>
                 <form class="form-inline" method="post" action="controller">
                     <div class="form-group">
                         <input type="hidden" name="command" value="renewSubscription"/>
@@ -45,6 +46,20 @@
                         </label>
                     </div>
                 </form>
+                </span>
+                <span>
+                <form class="form-inline" method="post" action="controller">
+                    <div class="form-group">
+                        <input type="hidden" name="command" value="cancelSubscription"/>
+                        <input type="hidden" name="id" value="${requestScope.subscription.id}"/>
+                        <label>
+                            <button class="btn btn-outline-info my-2 my-sm-0 mx-auto" type="submit">
+                                <fmt:message key="cancel.button"/>
+                            </button>
+                        </label>
+                    </div>
+                </form>
+                </span>
             </div>
         </div>
     </div>

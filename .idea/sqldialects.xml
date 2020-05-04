@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/sql/dbcreate-mysql.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/nure/chernysh/SummaryTask/db/dao/CategoryDAO.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/nure/chernysh/SummaryTask/db/dao/PeriodicalDAO.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ua/nure/chernysh/summary_task/db/dao/CategoryDAO.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ua/nure/chernysh/summary_task/db/dao/PeriodicalDAO.java" dialect="GenericSQL" />
   </component>
 </project>
